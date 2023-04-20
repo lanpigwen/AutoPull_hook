@@ -49,7 +49,7 @@ def autopull(request):
         sig_header=request.headers.get('X-Hub-Signature-256')
         if verify_signature(request.body,secret_key,sig_header):
             print('\n----------------signatures match-------------------------\n')
-            # os.chdir("/Netpp")
+            os.chdir("/Netpp")
             os.system("git pull origin main")
             ans={"status":"pull seccess"}
             return HttpResponse(json.dumps(ans))
