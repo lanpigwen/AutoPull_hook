@@ -40,6 +40,7 @@ def autopull(request):
             print('\n----------------signatures match-------------------------\n')
             os.chdir("/Netpp")
             print(os.getcwd())
+            
             os.system("git pull origin main")
             ans={"status":"pull seccess"}
             return HttpResponse(json.dumps(ans))
