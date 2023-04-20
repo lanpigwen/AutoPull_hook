@@ -6,6 +6,11 @@ import os
 import hashlib
 import hmac
 
+import logging # 导入模块
+
+logger = logging.getLogger('django') # 使用在配置文件中定义的名为“django”的日志器
+
+
 # secret token git webhook
 secret_key="123456" 
 
@@ -41,10 +46,12 @@ def autopull(request):
             os.chdir("/Netpp")
             print(os.getcwd())
             
+            logger.info("------------POST     "+os.getcwd()+"   test--------------") # 调用logger.info()方法输出Info级别的日志
             os.system("git pull origin main")
             ans={"status":"pull seccess"}
             return HttpResponse(json.dumps(ans))
         else:
+            logger.info("------------get   test--------------") # 调用logger.info()方法输出Info级别的日志
             ans={"status":"pull fail"}
             return HttpResponse(json.dumps(ans))    
     

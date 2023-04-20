@@ -151,7 +151,7 @@ LOGGING = {
         'file': {  # 向文件中输出日志
             'level': 'INFO',#输出等级为“INFO”
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': "../logs/msg.log",  # 日志文件的位置
+            'filename': "./logs/msg.log",  # 日志文件的位置
             'maxBytes': 300 * 1024 * 1024, # 日志文件的大小（300*1024*1024为300MB）
             'backupCount': 10, #日志文件的数量（超过设定的最大值会自动备份，备份数量最大值为10）
             'formatter': 'verbose' #日志输出格式：使用了在之前定义的'verbose'
