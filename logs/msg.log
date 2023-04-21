@@ -11,3 +11,7 @@ INFO 2023-04-21 23:33:52,237 autoreload 236 C:\AutoPull_hook\v_\views.py changed
 INFO 2023-04-21 23:33:53,089 autoreload 613 Watching for file changes with StatReloader
 INFO 2023-04-21 23:33:55,418 autoreload 236 C:\AutoPull_hook\v_\views.py changed, reloading.
 INFO 2023-04-21 23:33:56,625 autoreload 613 Watching for file changes with StatReloader
+INFO 2023-04-21 23:35:05,254 views 68 ------------     C:\Netpp    --------------
+INFO 2023-04-21 23:35:21,379 views 73 ----------------os.system(git pull origin main)Ö´ÐÐ×´Ì¬Âë£º
+INFO 2023-04-21 23:35:21,400 views 74 1
+INFO 2023-04-21 23:35:21,434 basehttp 157 "POST /autopull/ HTTP/1.1" 200 26
