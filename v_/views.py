@@ -64,15 +64,10 @@ def autopull(request):
         if verify_signature(request.body,secret_key,sig_header):
 
             os.chdir("/Netpp")
-            
-            logger.info("------------     "+os.getcwd()+"    --------------") # 调用logger.info()方法输出Info级别的日志
-            command="git pull origin main"
-
-            x=os.system(command)
-            # x=os.popen(command)
-            logger.info("----------------os.system("+command+")执行状态码：")
-            logger.info(x)
-            ans={"status":"pull success"}
+            os.system("git fetch --all")
+            os.system("git reset --hard origin/main")
+            os.system("git pull")
+            ans={"status":"pull seccess"}
             return HttpResponse(json.dumps(ans))
         else:
             logger.info("------------no match--------------") # 调用logger.info()方法输出Info级别的日志
