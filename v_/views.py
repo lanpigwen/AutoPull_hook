@@ -47,7 +47,10 @@ def autopull(request):
             print(os.getcwd())
             
             logger.info("------------POST     "+os.getcwd()+"   test--------------") # 调用logger.info()方法输出Info级别的日志
-            os.system("git pull origin main")
+            x=os.system("git pull origin main")
+            logger.info("----------------os.system()执行状态码：",x)
+            y=os.popen("git pull origin main")
+            logger.info("----------------os.popen()执行输出内容：",y.read())
             ans={"status":"pull seccess"}
             return HttpResponse(json.dumps(ans))
         else:

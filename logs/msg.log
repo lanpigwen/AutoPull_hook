@@ -1,0 +1,48 @@
+INFO 2023-04-21 01:06:29,124 autoreload 613 Watching for file changes with StatReloader
+INFO 2023-04-21 01:07:05,461 views 49 ------------POST     C:\Netpp   test--------------
+INFO 2023-04-21 01:07:17,702 basehttp 157 "POST /autopull/ HTTP/1.1" 200 26
+ERROR 2023-04-21 01:17:21,102 log 230 Internal Server Error: /autopull/
+Traceback (most recent call last):
+  File "c:\python\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view v_.views.autopull didn't return an HttpResponse object. It returned None instead.
+ERROR 2023-04-21 01:30:42,740 log 230 Internal Server Error: /autopull/
+Traceback (most recent call last):
+  File "c:\python\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view v_.views.autopull didn't return an HttpResponse object. It returned None instead.
+INFO 2023-04-21 01:33:11,423 views 49 ------------POST     C:\Netpp   test--------------
+ERROR 2023-04-21 01:37:29,337 log 230 Internal Server Error: /autopull/
+Traceback (most recent call last):
+  File "c:\python\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view v_.views.autopull didn't return an HttpResponse object. It returned None instead.
+INFO 2023-04-21 01:38:21,443 views 49 ------------POST     C:\Netpp   test--------------
+ERROR 2023-04-21 04:14:06,707 exception 90 Invalid HTTP_HOST header: 'passport.baidu.com'. You may need to add 'passport.baidu.com' to ALLOWED_HOSTS.
+WARNING 2023-04-21 04:14:06,754 log 230 Bad Request: /
+WARNING 2023-04-21 06:04:44,964 log 230 Not Found: /
+WARNING 2023-04-21 06:04:45,088 log 230 Not Found: /favicon.ico
+WARNING 2023-04-21 06:04:45,150 log 230 Not Found: /robots.txt
+WARNING 2023-04-21 06:46:51,896 log 230 Not Found: /
+WARNING 2023-04-21 06:46:52,380 log 230 Not Found: /
+WARNING 2023-04-21 07:34:31,566 log 230 Not Found: /
+WARNING 2023-04-21 07:34:32,519 log 230 Not Found: /api/islogged
+WARNING 2023-04-21 07:58:45,369 log 230 Not Found: /
+WARNING 2023-04-21 07:58:45,807 log 230 Not Found: /
+WARNING 2023-04-21 08:00:06,678 log 230 Not Found: /static/image/1.png
+WARNING 2023-04-21 08:00:06,725 log 230 Not Found: /static/image/logo.png
+ERROR 2023-04-21 08:25:13,866 exception 90 Invalid HTTP_HOST header: 'passport.baidu.com'. You may need to add 'passport.baidu.com' to ALLOWED_HOSTS.
+WARNING 2023-04-21 08:25:13,913 log 230 Bad Request: /
+WARNING 2023-04-21 09:44:02,732 log 230 Not Found: /
