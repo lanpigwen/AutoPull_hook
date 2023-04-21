@@ -68,11 +68,11 @@ def autopull(request):
             logger.info("------------     "+os.getcwd()+"    --------------") # 调用logger.info()方法输出Info级别的日志
             command="git pull origin main"
 
-            # x=os.system(command)
-            x=os.popen(command)
-            # logger.info("----------------os.system("+command+")执行状态码：")
-            # logger.info(x)
-            ans={"status":x.read()}
+            x=os.system(command)
+            # x=os.popen(command)
+            logger.info("----------------os.system("+command+")执行状态码：")
+            logger.info(x)
+            ans={"status":"pull success"}
             return HttpResponse(json.dumps(ans))
         else:
             logger.info("------------no match--------------") # 调用logger.info()方法输出Info级别的日志
