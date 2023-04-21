@@ -1,2 +1,5 @@
 INFO 2023-04-22 00:10:34,808 autoreload 613 Watching for file changes with StatReloader
 INFO 2023-04-22 00:12:34,129 autoreload 236 C:\AutoPull_hook\v_\urls.py changed, reloading.
+INFO 2023-04-22 01:05:53,517 autoreload 613 Watching for file changes with StatReloader
+INFO 2023-04-22 01:06:32,941 autoreload 236 C:\AutoPull_hook\v_\views.py changed, reloading.
+INFO 2023-04-22 01:06:34,201 autoreload 613 Watching for file changes with StatReloader

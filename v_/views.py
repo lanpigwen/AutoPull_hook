@@ -1,10 +1,16 @@
 from django.shortcuts import render, redirect,HttpResponse
 import json
 import os
+import subprocess
 
 # 验证webhook
 import hashlib
 import hmac
+
+import logging # 导入模块
+
+logger = logging.getLogger('django') # 使用在配置文件中定义的名为“django”的日志器
+
 
 # secret token git webhook
 secret_key="123456" 
@@ -32,23 +38,31 @@ def verify_signature(payload_body, secret_token, signature_header):
 from langdetect import DetectorFactory
 DetectorFactory.seed = 0
 
-def bg(request):
-    return render(request, 'bg.html', locals())
-
-def about(request):
-    return render(request, 'about.html', locals())
-
-def more(request):
-    return render(request, 'more.html', locals())
-
-def vrHouse(request):
-    return render(request, 'room.html',locals())
 
 def autopull(request):
+    # if request.method=='GET':
+    #     logger.info(os.getcwd())
+    #     olddir=os.getcwd()
+    #     logger.info("------------ old dir: "+os.getcwd()+"--------------") # 调用logger.info()方法输出Info级别的日志
+    #     command="cd ../Netpp"
+    #     x=os.system(command)
+    #     logger.info("----------------os.system("+command+")执行状态码(0 means success)：")
+    #     logger.info(x)
+    #     logger.info(os.getcwd())
+    #     newdir=os.getcwd()
+    #     logger.info("------------ after cmd dir: "+os.getcwd()+"--------------")
+
+    #     # subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+
+    #     # os.chdir('/Netpp')
+    #     chd=os.getcwd()
+    #     ans={"old dir":olddir,"new dir":newdir,"chdir":chd,"comand status":x}
+    #     return HttpResponse(json.dumps(ans)) 
+        
     if request.method=='POST':
         sig_header=request.headers.get('X-Hub-Signature-256')
         if verify_signature(request.body,secret_key,sig_header):
-            print('\n----------------signatures match-------------------------\n')
+
             os.chdir("/Netpp")
             os.system("git fetch --all")
             os.system("git reset --hard origin/main")
@@ -56,6 +70,7 @@ def autopull(request):
             ans={"status":"pull seccess"}
             return HttpResponse(json.dumps(ans))
         else:
+            logger.info("------------no match--------------") # 调用logger.info()方法输出Info级别的日志
             ans={"status":"pull fail"}
             return HttpResponse(json.dumps(ans))    
     
