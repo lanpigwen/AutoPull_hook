@@ -31,3 +31,76 @@ Traceback (most recent call last):
   File "c:\python\lib\subprocess.py", line 926, in _get_handles
     errwrite = _winapi.GetStdHandle(_winapi.STD_ERROR_HANDLE)
 OSError: [WinError 6] ¾ä±úÎÞÐ§¡£
+INFO 2023-04-21 15:39:27,067 views 43 C:\AutoPull_hook
+INFO 2023-04-21 15:39:27,067 views 45 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 15:39:27,379 views 48 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 15:39:27,379 views 49 0
+INFO 2023-04-21 15:39:27,379 views 50 C:\AutoPull_hook
+INFO 2023-04-21 15:39:27,379 views 52 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 15:46:43,293 views 43 C:\AutoPull_hook
+INFO 2023-04-21 15:46:43,293 views 45 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 15:46:43,372 views 48 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 15:46:43,372 views 49 0
+INFO 2023-04-21 15:46:43,372 views 50 C:\AutoPull_hook
+INFO 2023-04-21 15:46:43,372 views 52 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 15:49:30,019 views 44 C:\AutoPull_hook
+INFO 2023-04-21 15:49:30,019 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 15:49:30,097 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 15:49:30,097 views 50 0
+INFO 2023-04-21 15:49:30,097 views 51 C:\AutoPull_hook
+INFO 2023-04-21 15:49:30,097 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 15:55:24,870 views 44 C:\AutoPull_hook
+INFO 2023-04-21 15:55:24,870 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 15:55:24,948 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 15:55:24,948 views 50 0
+INFO 2023-04-21 15:55:24,948 views 51 C:\AutoPull_hook
+INFO 2023-04-21 15:55:24,948 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 16:14:30,500 views 44 C:\AutoPull_hook
+INFO 2023-04-21 16:14:30,500 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 16:14:30,578 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 16:14:30,578 views 50 0
+INFO 2023-04-21 16:14:30,578 views 51 C:\AutoPull_hook
+INFO 2023-04-21 16:14:30,578 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 16:15:54,817 views 44 C:\AutoPull_hook
+INFO 2023-04-21 16:15:54,817 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 16:15:54,880 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 16:15:54,880 views 50 0
+INFO 2023-04-21 16:15:54,880 views 51 C:\AutoPull_hook
+INFO 2023-04-21 16:15:54,880 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 16:30:18,133 views 44 C:\AutoPull_hook
+INFO 2023-04-21 16:30:18,133 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 16:30:18,211 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 16:30:18,211 views 50 0
+INFO 2023-04-21 16:30:18,211 views 51 C:\AutoPull_hook
+INFO 2023-04-21 16:30:18,211 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:19:14,051 views 44 C:\AutoPull_hook
+INFO 2023-04-21 21:19:14,051 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:19:14,066 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 21:19:14,082 views 50 0
+INFO 2023-04-21 21:19:14,082 views 51 C:\AutoPull_hook
+INFO 2023-04-21 21:19:14,082 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:34:34,064 views 44 C:\AutoPull_hook
+INFO 2023-04-21 21:34:34,064 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:34:34,080 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 21:34:34,080 views 50 0
+INFO 2023-04-21 21:34:34,080 views 51 C:\AutoPull_hook
+INFO 2023-04-21 21:34:34,080 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:35:15,509 views 44 C:\AutoPull_hook
+INFO 2023-04-21 21:35:15,509 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:35:15,509 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 21:35:15,509 views 50 0
+INFO 2023-04-21 21:35:15,509 views 51 C:\AutoPull_hook
+INFO 2023-04-21 21:35:15,509 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:36:20,070 views 44 C:\AutoPull_hook
+INFO 2023-04-21 21:36:20,070 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:36:20,070 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 21:36:20,070 views 50 0
+INFO 2023-04-21 21:36:20,070 views 51 C:\AutoPull_hook
+INFO 2023-04-21 21:36:20,070 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:36:47,433 views 44 C:\AutoPull_hook
+INFO 2023-04-21 21:36:47,433 views 46 ------------ old dir: C:\AutoPull_hook--------------
+INFO 2023-04-21 21:36:47,433 views 49 ----------------os.system(cd ../Netpp)Ö´ÐÐ×´Ì¬Âë(0 means success)£º
+INFO 2023-04-21 21:36:47,433 views 50 0
+INFO 2023-04-21 21:36:47,433 views 51 C:\AutoPull_hook
+INFO 2023-04-21 21:36:47,433 views 53 ------------ after cmd dir: C:\AutoPull_hook--------------
+WARNING 2023-04-21 22:59:16,426 log 230 Not Found: /

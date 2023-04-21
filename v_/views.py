@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect,HttpResponse
 import json
 import os
+import subprocess
 
 # 验证webhook
 import hashlib
@@ -51,28 +52,27 @@ def autopull(request):
         newdir=os.getcwd()
         logger.info("------------ after cmd dir: "+os.getcwd()+"--------------")
 
-        ans={"old dir":olddir,"new dir":newdir,"comand status":x}
+        # subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+
+        # os.chdir('/Netpp')
+        chd=os.getcwd()
+        ans={"old dir":olddir,"new dir":newdir,"chdir":chd,"comand status":x}
         return HttpResponse(json.dumps(ans)) 
         
     if request.method=='POST':
         sig_header=request.headers.get('X-Hub-Signature-256')
         if verify_signature(request.body,secret_key,sig_header):
-            print('\n----------------signatures match-------------------------\n')
-            # os.chdir("/Netpp")
-            logger.info(os.getcwd())
-            # print(os.getcwd())
+
+            os.chdir("/Netpp")
             
-            logger.info("------------POST     "+os.getcwd()+"   os system--------------") # 调用logger.info()方法输出Info级别的日志
-            # command="git pull origin main"
-            command="cd ../Netpp"
-            x=os.system(command)
-            logger.info("----------------os.system("+command+")执行状态码：")
-            logger.info(x)
-            logger.info(os.getcwd())
-            # y=os.popen("git pull origin main")
-            # logger.info("----------------os.popen()执行输出内容：")
-            # logger.info(y.read())
-            ans={"status":"pull seccess"}
+            logger.info("------------     "+os.getcwd()+"    --------------") # 调用logger.info()方法输出Info级别的日志
+            command="git pull origin main"
+
+            # x=os.system(command)
+            x=os.popen(command)
+            # logger.info("----------------os.system("+command+")执行状态码：")
+            # logger.info(x)
+            ans={"status":x.read()}
             return HttpResponse(json.dumps(ans))
         else:
             logger.info("------------no match--------------") # 调用logger.info()方法输出Info级别的日志
