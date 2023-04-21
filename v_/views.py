@@ -50,7 +50,9 @@ def autopull(request):
         if verify_signature(request.body,secret_key,sig_header):
             print('\n----------------signatures match-------------------------\n')
             os.chdir("/Netpp")
-            os.system("git pull --force origin main")
+            os.system("git fetch --all")
+            os.system("git reset --hard origin/main")
+            os.system("git pull")
             ans={"status":"pull seccess"}
             return HttpResponse(json.dumps(ans))
         else:
