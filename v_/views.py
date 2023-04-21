@@ -40,24 +40,24 @@ DetectorFactory.seed = 0
 
 
 def autopull(request):
-    if request.method=='GET':
-        logger.info(os.getcwd())
-        olddir=os.getcwd()
-        logger.info("------------ old dir: "+os.getcwd()+"--------------") # 调用logger.info()方法输出Info级别的日志
-        command="cd ../Netpp"
-        x=os.system(command)
-        logger.info("----------------os.system("+command+")执行状态码(0 means success)：")
-        logger.info(x)
-        logger.info(os.getcwd())
-        newdir=os.getcwd()
-        logger.info("------------ after cmd dir: "+os.getcwd()+"--------------")
+    # if request.method=='GET':
+    #     logger.info(os.getcwd())
+    #     olddir=os.getcwd()
+    #     logger.info("------------ old dir: "+os.getcwd()+"--------------") # 调用logger.info()方法输出Info级别的日志
+    #     command="cd ../Netpp"
+    #     x=os.system(command)
+    #     logger.info("----------------os.system("+command+")执行状态码(0 means success)：")
+    #     logger.info(x)
+    #     logger.info(os.getcwd())
+    #     newdir=os.getcwd()
+    #     logger.info("------------ after cmd dir: "+os.getcwd()+"--------------")
 
-        # subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    #     # subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
-        # os.chdir('/Netpp')
-        chd=os.getcwd()
-        ans={"old dir":olddir,"new dir":newdir,"chdir":chd,"comand status":x}
-        return HttpResponse(json.dumps(ans)) 
+    #     # os.chdir('/Netpp')
+    #     chd=os.getcwd()
+    #     ans={"old dir":olddir,"new dir":newdir,"chdir":chd,"comand status":x}
+    #     return HttpResponse(json.dumps(ans)) 
         
     if request.method=='POST':
         sig_header=request.headers.get('X-Hub-Signature-256')
