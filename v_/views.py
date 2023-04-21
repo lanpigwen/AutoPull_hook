@@ -39,24 +39,43 @@ DetectorFactory.seed = 0
 
 
 def autopull(request):
+    if request.method=='GET':
+        logger.info(os.getcwd())
+        olddir=os.getcwd()
+        logger.info("------------ old dir: "+os.getcwd()+"--------------") # 调用logger.info()方法输出Info级别的日志
+        command="cd ../Netpp"
+        x=os.system(command)
+        logger.info("----------------os.system("+command+")执行状态码(0 means success)：")
+        logger.info(x)
+        logger.info(os.getcwd())
+        newdir=os.getcwd()
+        logger.info("------------ after cmd dir: "+os.getcwd()+"--------------")
+
+        ans={"old dir":olddir,"new dir":newdir}
+        return HttpResponse(json.dumps(ans)) 
+        
     if request.method=='POST':
         sig_header=request.headers.get('X-Hub-Signature-256')
         if verify_signature(request.body,secret_key,sig_header):
             print('\n----------------signatures match-------------------------\n')
-            os.chdir("/Netpp")
-            print(os.getcwd())
+            # os.chdir("/Netpp")
+            logger.info(os.getcwd())
+            # print(os.getcwd())
             
             logger.info("------------POST     "+os.getcwd()+"   os system--------------") # 调用logger.info()方法输出Info级别的日志
-            x=os.system("git pull origin main")
-            logger.info("----------------os.system()执行状态码：")
+            # command="git pull origin main"
+            command="cd ../Netpp"
+            x=os.system(command)
+            logger.info("----------------os.system("+command+")执行状态码：")
             logger.info(x)
-            y=os.popen("git pull origin main")
-            logger.info("----------------os.popen()执行输出内容：")
-            logger.info(y.read())
+            logger.info(os.getcwd())
+            # y=os.popen("git pull origin main")
+            # logger.info("----------------os.popen()执行输出内容：")
+            # logger.info(y.read())
             ans={"status":"pull seccess"}
             return HttpResponse(json.dumps(ans))
         else:
-            logger.info("------------get   test--------------") # 调用logger.info()方法输出Info级别的日志
+            logger.info("------------no match--------------") # 调用logger.info()方法输出Info级别的日志
             ans={"status":"pull fail"}
             return HttpResponse(json.dumps(ans))    
     

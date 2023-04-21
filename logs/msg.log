@@ -1,3 +1,33 @@
 INFO 2023-04-21 15:06:17,817 views 49 ------------POST     C:\Netpp   test--------------
 INFO 2023-04-21 15:09:23,046 views 49 ------------POST     C:\Netpp   test--------------
 INFO 2023-04-21 15:11:35,971 views 49 ------------POST     C:\Netpp   test--------------
+ERROR 2023-04-21 15:13:50,825 log 230 Internal Server Error: /autopull/
+Traceback (most recent call last):
+  File "c:\python\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 186, in _get_response
+    self.check_response(response, callback)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 309, in check_response
+    "instead." % name
+ValueError: The view v_.views.autopull didn't return an HttpResponse object. It returned None instead.
+INFO 2023-04-21 15:15:06,238 views 49 ------------POST     C:\Netpp   os system--------------
+INFO 2023-04-21 15:16:37,819 views 47 C:\Netpp
+INFO 2023-04-21 15:16:37,819 views 50 ------------POST     C:\Netpp   os system--------------
+INFO 2023-04-21 15:16:58,308 views 52 ----------------os.system()Ö´ÐÐ×´Ì¬Âë£º
+INFO 2023-04-21 15:16:58,308 views 53 1
+ERROR 2023-04-21 15:16:58,386 log 230 Internal Server Error: /autopull/
+Traceback (most recent call last):
+  File "c:\python\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "c:\python\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "c:\python\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File ".\v_\views.py", line 54, in autopull
+  File "c:\python\lib\os.py", line 980, in popen
+    bufsize=buffering)
+  File "c:\python\lib\subprocess.py", line 667, in __init__
+    errread, errwrite) = self._get_handles(stdin, stdout, stderr)
+  File "c:\python\lib\subprocess.py", line 926, in _get_handles
+    errwrite = _winapi.GetStdHandle(_winapi.STD_ERROR_HANDLE)
+OSError: [WinError 6] ¾ä±úÎÞÐ§¡£
