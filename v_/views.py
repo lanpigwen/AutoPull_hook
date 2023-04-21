@@ -46,7 +46,7 @@ def autopull(request):
             os.chdir("/Netpp")
             print(os.getcwd())
             
-            logger.info("------------POST     "+os.getcwd()+"   test--------------") # 调用logger.info()方法输出Info级别的日志
+            logger.info("------------POST     "+os.getcwd()+"   os system--------------") # 调用logger.info()方法输出Info级别的日志
             x=os.system("git pull origin main")
             logger.info("----------------os.system()执行状态码：")
             logger.info(x)
