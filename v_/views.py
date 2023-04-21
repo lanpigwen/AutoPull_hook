@@ -51,7 +51,7 @@ def autopull(request):
         newdir=os.getcwd()
         logger.info("------------ after cmd dir: "+os.getcwd()+"--------------")
 
-        ans={"old dir":olddir,"new dir":newdir}
+        ans={"old dir":olddir,"new dir":newdir,"comand status":x}
         return HttpResponse(json.dumps(ans)) 
         
     if request.method=='POST':
